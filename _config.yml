@@ -12,7 +12,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: blog
+      title: A.blog
 
 author:
   name: Rick Rein
