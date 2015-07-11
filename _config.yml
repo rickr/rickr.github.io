@@ -12,15 +12,14 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: dbyll
+      title: blog
 
-description: Stylish Jekyll Theme
 author:
-  name: Rick
+  name: Rick Rein
   email: rick@rudelinux.org
   github: rickr
   twitter: rickrrrrrr
-  bio: A bio for me!
+  bio: rubyist, budding elixirist, food & booze lover, dude
   email_md5: 3de858783bbe315be519f12b5530efae
 
 rss_path: feed.xml
