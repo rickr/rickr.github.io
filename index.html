@@ -1,74 +1,72 @@
----
-layout: page
-tagline:
----
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <style>
+      @font-face{ font-family:'Inconsolata'; src: url(inconsolata.otf); }
+      body{ font-family:'Inconsolata'; padding: 0px 20px; }
+      h3{ margin-bottom: 0px}
+      ul{ padding-left: 25px; margin-top: 0px; }
+      .key{ font-weight:bold; }
+      .key:after{ content: ": " }
+      #no-really-please-dont-sue-me{ font-size: .5em; }
+      #contacts{ padding-left: 5px; }
+    </style>
+  </head>
+  <body>
+    <h2>Sup.</h2>
+    <div>
+      You have stumbled upon the site for a Rick Rein.<br />
+      I am not the following Rick Reins:<br>
+      <ul>
+        <li>the one with the better <a href='https://twitter.com/coolrickrein' target='_blank'>twitter name</a>
+        <li>the one that has done something with his life and is a
+          <a href='http://www.hmblaw.com/professionals-directory/eric-(rick)-s-rein.aspx' target='_blank'>lawyer</a><span id='no-really-please-dont-sue-me'><sup>(please don't sue me)</sup></span>
+        <li>the car salesman with <a href='http://www.dealerrater.com/sales/Rick-Rein-review-233726/' target='_blank'>insanely high ratings</a>
+      </ul>
+      I currently work for <a href='https://akamai.com' target='_blank'>Akamai Technologies</a> as a Software Engineer. I write mostly Ruby/Rails.<br />
+      I live in the Washinton DC area.
+    </div>
 
-{% for post in paginator.posts %}
+    <div>
+      <h3>Involvements</h3>
+      <ul>
+        <li>I run a food truck locator for the Northern VA/DC area: <a href='http://foodtrucksomfg.com' target='_blank'>foodtrucksomfg</a>
+        <li>I hang around <a href='https://operationcode.org/' target='_blank'>Operation Code</a>
+        <li>I mentor at <a href='http://turing.io/' target='_blank'>Turing</a>
+        <li>I build and race $500 cars for use in <a href='https://www.24hoursoflemons.com/'>endurance racing</a>
+      </ul>
+    </div>
 
-<article class="home">
+    <div>
+      <h3>Interests</h3>
+      <ul>
+        <li>ruby/rails, elixir
+        <li>electronics, robotics, arduino et al.
+        <li>design
+        <li>entre/intra-preneurship
+        <li>homebrewing
+        <li>scotch
+        <li>food
+      </ul>
+    </div>
 
-  <span class="post-date">
-    {% assign d = post.date | date: "%d" | plus:'0' %}
-    {{ post.date | date: "%B" }}
-    {% case d %}
-    {% when 1 or 21 or 31 %}{{ d }}st,
-    {% when 2 or 22 %}{{ d }}nd,
-    {% when 3 or 23 %}{{ d }}rd,
-    {% else %}{{ d }}th,
-    {% endcase %}
-    {{ post.date | date: "%Y" }}
-  </span>
+    <div>
+      <h3>Contacts</h3>
+      <table id='contacts'>
+        <tr><td class='key'>email</td><td><a href='mailto: hey@rickre.in'>hey@rickre.in</a></td></tr>
+        <tr><td class='key'>email</td><td><a href='mailto: rick@rudelinux.org'>rick@rudelinux.org</td></tr>
+        <tr><td class='key'>github</td><td><a href='https://github.com/rickr/' target='_blank'>rickr</a></td></tr>
+      </table>
+    </div>
 
-  <h2>
-    <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-  </h2>
-
-  <div>
-    {% if post.fullview %}
-    {{ post.content }}
-    {% else %}
-    {% if post.shortinfo %}
-    {{ post.shortinfo }}
-    {% elsif post.description %}
-    {{ post.description }}
-    {% else %}
-    {{ post.excerpt }}
-    {% endif %}
-    {% endif %}
-  </div>
-
-</article>
-{% endfor %}
-<hr/>
-
-<ul class="pager"> 
-
-  {% if paginator.previous_page %}
-  <li class="previous">
-    {% if paginator.previous_page == 1 %}
-    <a href="{{ site.BASE_PATH }}/">&larr; Newer</a>
-    {% else %}
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.previous_page }}">&larr; Newer</a>
-    {% endif %}
-  </li>
-  {% else %}
-  <li class="previous disabled">
-    <a>&larr; Newer</a>
-  </li>
-  {% endif %}
-  
-  <li>
-    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  </li>
-
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.next_page }}">Older &rarr;</a>
-  </li>
-  {% else %}
-  <li class="next disabled">
-    <a>Older &rarr;</a>        
-  </li>
-  {% endif %}
-
-</ul>
+    <div>
+      <h3>Ramblings</h3>
+      <ul>
+        <li><a href="articles/default_parameters_in_elixir.txt">Default parameters in elixir</a>
+      </ul>
+    </div>
+  </body>
+</html>
