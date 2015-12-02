@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <style>
+      @font-face{ font-family:'Inconsolata'; src: url(inconsolata.otf); }
+      body{ font-family:'Inconsolata'; padding: 0px 20px; }
+      ul{ padding-left: 25px; margin-top: 0px; }
+    </style>
+  </head>
+  <body>
+  </body>
+</html>
